@@ -8,34 +8,36 @@
     <title>Chat | Kakao Clone</title>
 </head>
 <body class="chats-body">
-    <div class="status-bar">
-        <div class="status-bar__column">
-            <span class="status-bar__clock"> 13:54 </span>
+    <div class="header-wrapper">
+        <div class="status-bar">
+            <div class="status-bar__column">
+                <span class="status-bar__clock"> 13:54 </span>
+            </div>
+            <div class="status-bar__column">
+                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                <i class="fa fa-volume-off" aria-hidden="true"></i>
+                <i class="fa fa-wifi" aria-hidden="true"></i>
+                <span class="status-bar__battery-level">100%</span>
+                <i class="fa fa-battery-full" aria-hidden="true"></i>
+            </div>
         </div>
-        <div class="status-bar__column">
-            <i class="fa fa-clock-o" aria-hidden="true"></i>
-            <i class="fa fa-volume-off" aria-hidden="true"></i>
-            <i class="fa fa-wifi" aria-hidden="true"></i>
-            <span class="status-bar__battery-level">100%</span>
-            <i class="fa fa-battery-full" aria-hidden="true"></i>
-        </div>
+        <header class="header">
+            <div class="header__header-column">
+                    <a href="index.html" class="header__back-btn">
+                        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                    </a>
+                <h1 class="header__title">Best Friend</h1>
+            </div>
+            <div class="header__header-column">
+                <span class="header__icon">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </span>
+                <span class="header__icon">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </span>
+            </div>
+        </header>
     </div>
-    <header class="header">
-        <div class="header__header-column">
-                <a href="index.html" class="header__back-btn">
-                    <i class="fa fa-arrow-left" aria-hidden="true"></i>
-                </a>
-            <h1 class="header__title">Best Friend</h1>
-        </div>
-        <div class="header__header-column">
-            <span class="header__icon">
-                <i class="fa fa-search" aria-hidden="true"></i>
-            </span>
-            <span class="header__icon">
-                <i class="fa fa-bars" aria-hidden="true"></i>
-            </span>
-        </div>
-    </header>
     <main class="chat-screen">
         <ul class="chat__messages">
             <span class="chat__timestamp">Friday, January 11, 2020</span>
@@ -75,14 +77,17 @@
             </li>
         </ul>
     </main>
-    <div class="chat__write">
-        <div class="chat__write-column">
+    <div class="chat__write--container">
+        <input 
+            class="chat__write" 
+            type="text" 
+            placeholder="Send message" 
+            classe="chat__write-input" 
+        />
+        <div class="chat__icon-left chat__icon">
             <i class="fa fa-plus-square" aria-hidden="true"></i>
         </div>
-        <div class="chat__write-column">
-            <input type="text" placeholder="Send message" classe="chat__write-input" />
-        </div>
-        <div class="chat__write-column">
+        <div class="chat__icon-right chat__icon">
             <span class="chat__write-icon">
                 <i class="fa fa-smile-o" aria-hidden="true"></i>
             </span>
@@ -91,5 +96,11 @@
             </span>
         </div>
     </div>
+    <div class="bigScreen">
+        <span class="bigScreen__text">Please make your screen small</span>
+    </div>
 </body>
 </html>
+
+<!--div icon은 input 다음에 넣어야 다음과 같은 애니메이션(sibling ~) 구현 가능--> 
+
